@@ -8,6 +8,7 @@ const io = socketIO(server);
 
 app.use(express.static('public'));
 
+
 io.on('connection', (socket) => {
   socket.on('join', (username) => {
     socket.username = username;
